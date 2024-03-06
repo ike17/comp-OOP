@@ -60,8 +60,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return String.format("Time: %s, Latitude: %f, Longitude: %f, Elevation: %f",
-                timestamp, latitude, longitude, elevation);
+        return String.format("(%f %f) %f m", longitude, latitude, elevation);
     }
 
     // IMPORTANT: Do not alter anything beneath this comment!

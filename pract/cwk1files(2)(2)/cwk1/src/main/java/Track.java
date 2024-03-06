@@ -6,20 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Represents a collection of GPS data points.
- *
- * @author YOUR NAME
- */
 public class Track {
-    private List<Point> points;
+    private List<Point> points = new ArrayList<>();
 
+    // Constructor that initializes the list from a file
     public Track(String filename) throws IOException {
-        points = new ArrayList<>();
         readFile(filename);
     }
 
-    private void readFile(String filename) throws IOException {
+    // Alternate no-arg constructor to support tests expecting an empty Track
+    public Track() {
+        this.points = new ArrayList<>();
+    }
+
+    // Modified to package-private or public to allow testing, if necessary
+    void readFile(String filename) throws IOException {
         try (Scanner scanner = new Scanner(Files.newBufferedReader(Paths.get(filename)))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -35,6 +36,7 @@ public class Track {
         }
     }
 
+    // Existing methods unchanged
     public int size() {
         return points.size();
     }
@@ -49,4 +51,6 @@ public class Track {
     public void add(Point point) {
         points.add(point);
     }
+
+
 }
