@@ -60,7 +60,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return String.format("(%f.5, %f.5) %f.1 m", longitude, latitude, elevation);
+        return String.format("(%.5f, %.5f), %.1f m", longitude, latitude, elevation);
     }
 
     // IMPORTANT: Do not alter anything beneath this comment!
