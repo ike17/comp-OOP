@@ -25,7 +25,10 @@ public class Track {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] data = line.split(",");
-                if (data.length != 4) throw new IllegalArgumentException("Incorrect data format");
+                if (data.length != 4) {
+                  throw new GPSException("Incorrect data format");
+                }
+
                 ZonedDateTime timestamp = ZonedDateTime.parse(data[0]);
                 double longitude = Double.parseDouble(data[1]);
                 double latitude = Double.parseDouble(data[2]);
@@ -43,7 +46,7 @@ public class Track {
 
     public Point get(int index) {
         if (index < 0 || index >= points.size()) {
-            throw new IndexOutOfBoundsException("Invalid index");
+            throw new GPSException("Invalid index: " + index);
         }
         return points.get(index);
     }

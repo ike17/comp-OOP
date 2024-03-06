@@ -29,13 +29,13 @@ public class Point {
         this.timestamp = timestamp;
         // Longitude should be between MIN_LONGITUDE and MAX_LONGITUDE degrees.
         if (longitude < MIN_LONGITUDE || longitude > MAX_LONGITUDE) {
-            throw new IllegalArgumentException("Invalid longitude value");
+            throw new GPSException("Invalid longitude value");
         }
         this.longitude = longitude;
 
         // Latitude should be between MIN_LATITUDE and MAX_LATITUDE degrees.
         if (latitude < MIN_LATITUDE || latitude > MAX_LATITUDE) {
-            throw new IllegalArgumentException("Invalid latitude value");
+            throw new GPSException("Invalid latitude value");
         }
         this.latitude = latitude;
 
@@ -60,7 +60,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return String.format("(%f %f) %f m", longitude, latitude, elevation);
+        return String.format("(%f.5, %f.5) %f.1 m", longitude, latitude, elevation);
     }
 
     // IMPORTANT: Do not alter anything beneath this comment!
