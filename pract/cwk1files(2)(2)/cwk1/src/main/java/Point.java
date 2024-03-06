@@ -10,7 +10,7 @@ import static java.lang.Math.toRadians;
 /**
  * Represents a point in space and time, recorded by a GPS sensor.
  *
- * @author Nick Efford & YOUR NAME
+ * @author Nick Efford & sc23mas
  */
 public class Point {
     // Constants useful for bounds checking, etc.
@@ -27,6 +27,7 @@ public class Point {
 
     public Point(ZonedDateTime timestamp, double longitude, double latitude, double elevation) {
         this.timestamp = timestamp;
+
         // Longitude should be between MIN_LONGITUDE and MAX_LONGITUDE degrees.
         if (longitude < MIN_LONGITUDE || longitude > MAX_LONGITUDE) {
             throw new GPSException("Invalid longitude value");
@@ -42,6 +43,7 @@ public class Point {
         this.elevation = elevation;
     }
 
+    //getter methods
     public ZonedDateTime getTime() {
         return timestamp;
     }
