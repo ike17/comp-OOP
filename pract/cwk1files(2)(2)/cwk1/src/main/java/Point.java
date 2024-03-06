@@ -20,13 +20,13 @@ public class Point {
     private static final double MAX_LATITUDE = 90.0;
     private static final double MEAN_EARTH_RADIUS = 6.371009e+6;
 
-    private ZonedDateTime time;
+    private ZonedDateTime timestamp;
     private double longitude;
     private double latitude;
     private double elevation;
 
-    public Point(ZonedDateTime time, double longitude, double latitude, double elevation) {
-        this.time = time;
+    public Point(ZonedDateTime timestamp, double longitude, double latitude, double elevation) {
+        this.timestamp = timestamp;
         // Longitude should be between MIN_LONGITUDE and MAX_LONGITUDE degrees.
         if (longitude < MIN_LONGITUDE || longitude > MAX_LONGITUDE) {
             throw new IllegalArgumentException("Invalid longitude value");
@@ -43,7 +43,7 @@ public class Point {
     }
 
     public ZonedDateTime getTime() {
-        return time;
+        return timestamp;
     }
 
     public double getLatitude() {
@@ -61,7 +61,7 @@ public class Point {
     @Override
     public String toString() {
         return String.format("Time: %s, Latitude: %f, Longitude: %f, Elevation: %f",
-                time, latitude, longitude, elevation);
+                timestamp, latitude, longitude, elevation);
     }
 
     // IMPORTANT: Do not alter anything beneath this comment!
