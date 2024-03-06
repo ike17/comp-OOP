@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.263s</div>
+<div class="counter">0.214s</div>
 <p>duration</p>
 </div>
 </td>
@@ -77,8 +77,7 @@
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.readClearOldData(BasicTests.java:186)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -175,8 +174,7 @@
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.readFile(BasicTests.java:175)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -363,8 +361,7 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.lambda$readMissingData$24(BasicTests.java:169)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
 	... 87 more
@@ -386,43 +383,43 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 <tr>
 <td class="success">Elevation stored and retrieved correctly</td>
 <td class="success">elevation()</td>
-<td class="success">0.031s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Points stored in and retrieved from a Track correctly</td>
 <td class="success">getPoint()</td>
-<td class="success">0.002s</td>
+<td class="success">0.021s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">GPSException when retrieving from an empty Track</td>
 <td class="success">getPointEmptyDataset()</td>
-<td class="success">0.025s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Latitude stored and retrieved correctly</td>
 <td class="success">latitude()</td>
-<td class="success">0.012s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">GPSException if latitude is too high</td>
 <td class="success">latitudeTooHigh()</td>
-<td class="success">0.006s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">GPSException if longitude is too low</td>
 <td class="success">latitudeTooLow()</td>
-<td class="success">0.014s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Longitude stored and retrieved correctly</td>
 <td class="success">longitude()</td>
-<td class="success">0.001s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -434,61 +431,61 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 <tr>
 <td class="success">GPSException if longitude is too low</td>
 <td class="success">longitudeTooLow()</td>
-<td class="success">0.001s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Correct string representation of a Point</td>
 <td class="success">pointAsString()</td>
-<td class="success">0.083s</td>
+<td class="success">0.041s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">GPSException if index is too high</td>
 <td class="success">pointIndexTooHigh()</td>
-<td class="success">0.001s</td>
+<td class="success">0.010s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">GPSException if index is too low</td>
 <td class="success">pointIndexTooLow()</td>
-<td class="success">0.001s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Old data cleared when reading a new file</td>
 <td class="failures">readClearOldData()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.008s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Points read into a Track correctly</td>
 <td class="failures">readFile()</td>
-<td class="failures">0.019s</td>
+<td class="failures">0.030s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Appropriate exception if data file does not exist</td>
 <td class="success">readFileNotFound()</td>
-<td class="success">0.022s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if data file has fewer than 4 columns</td>
 <td class="failures">readMissingData()</td>
-<td class="failures">0.024s</td>
+<td class="failures">0.017s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Time stored and retrieved correctly</td>
 <td class="success">time()</td>
-<td class="success">0.001s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Size of a Track returned correctly</td>
 <td class="success">trackSize()</td>
-<td class="success">0.016s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -501,7 +498,7 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 6, 2024, 6:26:00 AM</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 6, 2024, 7:12:10 AM</p>
 </div>
 </div>
 </body>

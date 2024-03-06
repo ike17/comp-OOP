@@ -6,10 +6,9 @@ public class TrackInfo {
           System.err.println("Error: No filename provided.");
           System.exit(0);
       }
-      
-      String filename = args[0];
+
       try {
-          Track track = new Track(filename);
+          Track track = new Track(args[0]);
           System.out.println(track.size() + " points in track");
           System.out.println("Lowest point is " + track.lowestPoint());
           System.out.println("Highest point is " + track.highestPoint());

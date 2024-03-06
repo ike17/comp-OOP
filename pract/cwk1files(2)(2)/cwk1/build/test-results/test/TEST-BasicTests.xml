@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BasicTests" tests="18" skipped="0" failures="3" errors="0" timestamp="2024-03-06T06:25:59" hostname="codespaces-19a4d6" time="0.379">
+<testsuite name="BasicTests" tests="18" skipped="0" failures="3" errors="0" timestamp="2024-03-06T07:12:10" hostname="codespaces-19a4d6" time="0.273">
   <properties/>
-  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.083"/>
-  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.012"/>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.014"/>
-  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.025"/>
-  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.022"/>
-  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.019">
+  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.041"/>
+  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.004"/>
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.004"/>
+  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.01"/>
+  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.009"/>
+  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.03">
     <failure message="java.time.format.DateTimeParseException: Text 'Time' could not be parsed at index 0" type="java.time.format.DateTimeParseException">java.time.format.DateTimeParseException: Text 'Time' could not be parsed at index 0
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.readFile(BasicTests.java:175)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -100,15 +99,15 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if latitude is too high" classname="BasicTests" time="0.006"/>
-  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.001"/>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.001"/>
-  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.001"/>
-  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.031"/>
-  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.001"/>
-  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.001"/>
-  <testcase name="Size of a Track returned correctly" classname="BasicTests" time="0.016"/>
-  <testcase name="GPSException if data file has fewer than 4 columns" classname="BasicTests" time="0.024">
+  <testcase name="GPSException if latitude is too high" classname="BasicTests" time="0.014"/>
+  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.003"/>
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.012"/>
+  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.01"/>
+  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.001"/>
+  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.012"/>
+  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.014"/>
+  <testcase name="Size of a Track returned correctly" classname="BasicTests" time="0.002"/>
+  <testcase name="GPSException if data file has fewer than 4 columns" classname="BasicTests" time="0.017">
     <failure message="org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;GPSException&gt; but was: &lt;java.time.format.DateTimeParseException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;GPSException&gt; but was: &lt;java.time.format.DateTimeParseException&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
@@ -203,20 +202,18 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.lambda$readMissingData$24(BasicTests.java:169)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
 	... 87 more
 </failure>
   </testcase>
-  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.002">
+  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.008">
     <failure message="java.time.format.DateTimeParseException: Text 'Time' could not be parsed at index 0" type="java.time.format.DateTimeParseException">java.time.format.DateTimeParseException: Text 'Time' could not be parsed at index 0
 	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2046)
 	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1948)
 	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:598)
-	at java.base/java.time.ZonedDateTime.parse(ZonedDateTime.java:583)
-	at Track.readFile(Track.java:31)
+	at Track.readFile(Track.java:32)
 	at BasicTests.readClearOldData(BasicTests.java:186)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -305,7 +302,7 @@ Caused by: java.time.format.DateTimeParseException: Text 'Time' could not be par
 </failure>
   </testcase>
   <testcase name="GPSException if longitude is too high" classname="BasicTests" time="0.002"/>
-  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.002"/>
+  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

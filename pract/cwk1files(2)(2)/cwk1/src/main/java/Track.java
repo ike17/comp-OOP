@@ -1,13 +1,13 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
-import java.time.ZonedDateTime;
-
 
 public class Track {
     private List<Point> points = new ArrayList<>();
@@ -21,22 +21,22 @@ public class Track {
     }
 
     void readFile(String filename) throws IOException {
-        try (Scanner scanner = new Scanner(Files.newBufferedReader(Paths.get(filename)))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                String[] data = line.split(",");
-                if (data.length != 4) {
-                    throw new GPSException("Incorrect data format");
-                }
-                ZonedDateTime timestamp = ZonedDateTime.parse(data[0]);
-                double longitude = Double.parseDouble(data[1]);
-                double latitude = Double.parseDouble(data[2]);
-                double elevation = Double.parseDouble(data[3]);
-                Point point = new Point(timestamp, longitude, latitude, elevation);
-                points.add(point);
-            }
-        }
-    }
+      DateTimeFormatter formatter = DateTimeFormatter.ISO_ZONED_DATE_TIME; // Format for parsing ZonedDateTime
+      points.clear(); // Clear existing points before reading new data
+      try (Scanner scanner = new Scanner(Files.newBufferedReader(Paths.get(filename)))) {
+          while (scanner.hasNextLine()) {
+              String[] data = scanner.nextLine().split(",");
+              if (data.length != 4) { // Check for the correct number of columns
+                  throw new GPSException("Incorrect data format");
+              }
+              ZonedDateTime timestamp = ZonedDateTime.parse(data[0], formatter); // Parse the ZonedDateTime
+              double longitude = Double.parseDouble(data[1]);
+              double latitude = Double.parseDouble(data[2]);
+              double elevation = Double.parseDouble(data[3]);
+              points.add(new Point(timestamp, longitude, latitude, elevation)); // Add the new point
+          }
+      }
+  }
 
     public int size() {
         return points.size();
@@ -67,6 +67,10 @@ public class Track {
 
     public double totalDistance() {
         double total = 0.0;
+        if (points.size() < 2) {
+          throw new GPSException("Not enough points for calculation");
+        }
+      
         for (int i = 0; i < points.size() - 1; i++) {
             total += Point.greatCircleDistance(points.get(i), points.get(i + 1));
         }
@@ -79,5 +83,5 @@ public class Track {
         }
         long durationInSeconds = ChronoUnit.SECONDS.between(points.get(0).getTime(), points.get(points.size() - 1).getTime());
         return totalDistance() / durationInSeconds;
-    }
+      }
 }
