@@ -2,10 +2,10 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Shoe {
+public class InnerShoe {
     private LinkedList<BaccaratCard> cards = new LinkedList<>();
 
-    public Shoe(int numberOfDecks) throws CardException {
+    public InnerShoe(int numberOfDecks) throws CardException {
         if (numberOfDecks != 6 && numberOfDecks != 8) {
             throw new CardException("Invalid number of decks. Only 6 or 8 are allowed.");
         }
