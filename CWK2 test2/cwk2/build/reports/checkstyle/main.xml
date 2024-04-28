@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/BaccaratHand.java">
+<error line="16" column="23" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="21" column="26" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/CardException.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/Shoe.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/Card.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/CardCollection.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/BaccaratCard.java">
+<error line="11" column="19" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="21" column="50" severity="warning" message="Only one statement per line allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
+<error line="22" column="53" severity="warning" message="Only one statement per line allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
+<error line="23" column="51" severity="warning" message="Only one statement per line allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
+<error line="24" column="51" severity="warning" message="Only one statement per line allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck"/>
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test2/cwk2/src/main/java/Baccarat.java">
+<error line="11" column="29" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="99" severity="warning" message="Line is longer than 100 characters (found 107)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>

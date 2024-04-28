@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/BaccaratHand.java">
+<error line="16" column="40" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="21" column="26" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/CardException.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/Shoe.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/Card.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/CardCollection.java">
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/BaccaratCard.java">
+<error line="11" column="19" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="17" severity="warning" message="Line is longer than 100 characters (found 126)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/workspaces/comp-OOP/CWK2 test3/cwk2/src/main/java/Baccarat.java">
+<error line="11" column="29" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="82" severity="warning" message="Line is longer than 100 characters (found 127)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="82" column="33" severity="warning" message="Unnecessary parentheses around expression." source="com.puppycrawl.tools.checkstyle.checks.coding.UnnecessaryParenthesesCheck"/>
+<error line="85" severity="warning" message="Line is longer than 100 characters (found 102)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="91" severity="warning" message="Line is longer than 100 characters (found 109)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="93" severity="warning" message="Line is longer than 100 characters (found 107)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="95" severity="warning" message="Line is longer than 100 characters (found 107)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="97" severity="warning" message="Line is longer than 100 characters (found 109)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="110" column="49" severity="warning" message="Unnecessary parentheses around expression." source="com.puppycrawl.tools.checkstyle.checks.coding.UnnecessaryParenthesesCheck"/>
+<error line="129" severity="warning" message="Line is longer than 100 characters (found 107)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>
