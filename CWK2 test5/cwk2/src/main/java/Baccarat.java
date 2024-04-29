@@ -23,11 +23,10 @@ public class Baccarat {
 
         // Check for natural win first
         if (playerHand.isNatural() || bankerHand.isNatural()) {
-            System.out.println("Natural win detected!");
             if (playerHand.isNatural()) {
                 System.out.println("Player has a Natural.");
             }
-            if (bankerHand.isNatural()) {
+            else if (bankerHand.isNatural()) {
                 System.out.println("Banker has a Natural.");
             }
         } else {
