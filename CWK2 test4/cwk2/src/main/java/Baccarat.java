@@ -37,8 +37,10 @@ public class Baccarat {
         bankerHand.add(shoe.deal());
         playerHand.add(shoe.deal());
         bankerHand.add(shoe.deal());
+
         System.out.println("Player: " + playerHand);
         System.out.println("Banker: " + bankerHand);
+
         if (playerHand.isNatural() || bankerHand.isNatural()) {
             determineOutcome(playerHand, bankerHand);
         } else {
@@ -64,13 +66,14 @@ public class Baccarat {
       }
   
       // If the player did draw a third card, apply complex rules based on the banker's total and player's third card value
-      int playerThirdCardValue = playerThirdCard.value();  // Assuming value method returns Baccarat values correctly
+      int playerThirdCardValue = playerThirdCard.value(); 
   
       switch (bankerTotal) {
           case 0:
           case 1:
           case 2:
               return true;
+
           // Banker draws unless player's third card is an 8
           case 3:
               return playerThirdCardValue != 8;  
@@ -83,6 +86,7 @@ public class Baccarat {
           // Banker draws if player's third card is 6 or 7
           case 6:
               return playerThirdCardValue == 6 || playerThirdCardValue == 7;  
+              
           default:
               return false;
       }
