@@ -55,7 +55,7 @@ public class Baccarat {
             if (playerHand.isNatural()) {
                 System.out.println("Player has a Natural");
             }
-            if (bankerHand.isNatural()) {
+            else if (bankerHand.isNatural()) {
                 System.out.println("Banker has a Natural");
             }
         } else {
@@ -67,8 +67,8 @@ public class Baccarat {
             }
 
             // Banker's third card rules
-            BaccaratCard playerThirdCard = playerHand.size() > 2 ? (
-                BaccaratCard) playerHand.getCards().get(2) : null;
+            BaccaratCard playerThirdCard = playerHand.size() > 2 ? 
+                (BaccaratCard) playerHand.getCards().get(2) : null;
             if (shouldBankerDraw(bankerHand.value(), playerThirdCard)) {
                 System.out.println("Dealing third card to banker...");
                 bankerHand.add((BaccaratCard) shoe.deal());

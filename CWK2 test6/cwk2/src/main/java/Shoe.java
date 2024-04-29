@@ -2,11 +2,7 @@ import java.util.Collections;
 
 public class Shoe extends CardCollection {
 
-    /**
-     * Constructs a Shoe with a specified number of decks of Baccarat cards.
-     *
-     * @param numDecks The number of decks to include in the shoe.
-     */
+    // Make sure there are either 6 or 8 Decks when the game begins
     public Shoe(int numDecks) {
         if (numDecks != 6 && numDecks != 8) {
             throw new CardException("Invalid number of decks");
@@ -20,19 +16,12 @@ public class Shoe extends CardCollection {
         }
     }
 
-    /**
-     * Shuffles the cards in the shoe.
-     */
+    // Shuffle the deck
     public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    /**
-     * Deals a card from the shoe.
-     *
-     * @return The BaccaratCard at the top of the shoe.
-     * @throws CardException if the shoe is empty.
-     */
+    // Deal card
     public BaccaratCard deal() {
         if (cards.isEmpty()) {
             throw new CardException("Cannot deal from an empty shoe.");
